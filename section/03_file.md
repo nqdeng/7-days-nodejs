@@ -55,7 +55,7 @@ NodeJS提供了基本的文件操作API，但是像文件拷贝这种高级功�
 
 JS语言自身只有字符串数据类型，没有二进制数据类型，因此NodeJS提供了一个与`String`对等的全局构造函数`Buffer`来提供对二进制数据的操作。除了可以读取文件得到`Buffer`的实例外，还能够直接构造，例如：
 
-	var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]);
+	var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6f ]);
 
 `Buffer`与字符串类似，除了可以用`.length`属性得到字节长度外，还可以用`[index]`方式读取指定位置的字节，例如：
 
