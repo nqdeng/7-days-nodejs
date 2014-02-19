@@ -563,13 +563,13 @@ main(process.argv.slice(2));</code></pre>
     |           |
    bin     bin.slice(2)</code></pre>
 <p>因此对<code>.slice</code>方法返回的<code>Buffer</code>的修改会作用于原<code>Buffer</code>，例如：</p>
-<pre><code>var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6f ]);
+<pre><code>var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]);
 var sub = bin.slice(2);
 
 sub[0] = 0x65;
 console.log(bin); // =&gt; &lt;Buffer 48 65 65 6c 6f&gt;</code></pre>
 <p>也因此，如果想要拷贝一份<code>Buffer</code>，得首先创建一个新的<code>Buffer</code>，并通过<code>.copy</code>方法把原<code>Buffer</code>中的数据复制过去。这个类似于申请一块新的内存，并把已有内存中的数据复制过去。以下是一个例子。</p>
-<pre><code>var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6f ]);
+<pre><code>var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]);
 var dup = new Buffer(bin.length);
 
 bin.copy(dup);
