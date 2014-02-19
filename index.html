@@ -548,7 +548,7 @@ main(process.argv.slice(2));</code></pre>
 <p>   <strong>官方文档： </strong> <a href="http://nodejs.org/api/buffer.html"><a href="http://nodejs.org/api/buffer.html">http://nodejs.org/api/buffer.html</a></a></p>
 </blockquote>
 <p>JS语言自身只有字符串数据类型，没有二进制数据类型，因此NodeJS提供了一个与<code>String</code>对等的全局构造函数<code>Buffer</code>来提供对二进制数据的操作。除了可以读取文件得到<code>Buffer</code>的实例外，还能够直接构造，例如：</p>
-<pre><code>var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]);</code></pre>
+<pre><code>var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6f ]);</code></pre>
 <p><code>Buffer</code>与字符串类似，除了可以用<code>.length</code>属性得到字节长度外，还可以用<code>[index]</code>方式读取指定位置的字节，例如：</p>
 <pre><code>bin[0]; // =&gt; 0x48;</code></pre>
 <p><code>Buffer</code>与字符串能够互相转化，例如可以使用指定编码将二进制数据转化为字符串：</p>
