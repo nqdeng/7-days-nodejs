@@ -27,6 +27,15 @@ header {
 padding-left: 240px;
 }
 
+header .banner {
+margin: 0 0 10px 0;
+}
+
+header .banner a {
+color: #777;
+font-weight: bold;
+}
+
 header h1 {
 background: #ccffcc;
 border-radius: 15px;
@@ -145,6 +154,7 @@ padding-left: 240px;
 </head>
 <body>
 <header>
+<div class="banner"><a href="#8">» 提供给NodeJS爱好者的一份工作机会</a></div>
 <x-markdown src="section/00_header.md" />
 </header>
 <nav>
@@ -158,6 +168,7 @@ padding-left: 240px;
 <x-markdown src="section/05_process.md" />
 <x-markdown src="section/06_async_programming.md" />
 <x-markdown src="section/07_example.md" />
+<x-markdown src="section/08_job.md" />
 </article>
 <footer>
 <x-markdown src="section/99_footer.md" />
