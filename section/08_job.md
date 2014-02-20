@@ -9,7 +9,8 @@
 >
 >	这吃饭不排队，停车不收费，通勤不累。
 >
->	如果你也愿意加入我们，趁着还有一些股票可以发，赶紧来吧。 
+>	如果你也愿意加入我们，趁着还有一些股票可以发，赶紧发送简历至[nanqiao.dengnq@alibaba-inc.com](mailto:nanqiao.dengnq@alibaba-inc.com)，我们会尽快与你联系，谢谢。
+
 
 ### 工作机会
 
@@ -35,7 +36,3 @@
 3. 重视团队协作，愿意探寻和改进目前还不成熟的前端开发流程，了解各种常用工具。
 4. 热爱前端技术，个性乐观开朗，逻辑性强，善于和各种背景的人沟通合作。
 5. 如具备其它语言的开发经验，比如Java或PHP或Actionscript3/Flex会更受欢迎。
-
-#### 简历投到哪儿？
-
-请把你的简历发送至[nanqiao.dengnq@alibaba-inc.com](mailto:nanqiao.dengnq@alibaba-inc.com)，我们会尽快与你联系，谢谢。
