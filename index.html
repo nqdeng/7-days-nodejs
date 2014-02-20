@@ -27,6 +27,15 @@ header {
 padding-left: 240px;
 }
 
+header .banner {
+margin: 0 0 10px 0;
+}
+
+header .banner a {
+color: #777;
+font-weight: bold;
+}
+
 header h1 {
 background: #ccffcc;
 border-radius: 15px;
@@ -145,12 +154,13 @@ padding-left: 240px;
 </head>
 <body>
 <header>
+<div class="banner"><a href="#8">» 提供给NodeJS爱好者的一份工作机会</a></div>
 <h1>七天学会NodeJS</h1>
 
 </header>
 <nav>
 <ul>
-<li class="level2"><a href="#1">NodeJS基础</a></li><li class="level3"><a href="#1.1">什么是NodeJS</a></li><li class="level3"><a href="#1.2">有啥用处</a></li><li class="level3"><a href="#1.3">如何安装</a></li><li class="level4"><a href="#1.3.1">安装程序</a></li><li class="level4"><a href="#1.3.2">编译安装</a></li><li class="level3"><a href="#1.4">如何运行</a></li><li class="level4"><a href="#1.4.1">权限问题</a></li><li class="level3"><a href="#1.5">模块</a></li><li class="level4"><a href="#1.5.1">require</a></li><li class="level4"><a href="#1.5.2">exports</a></li><li class="level4"><a href="#1.5.3">module</a></li><li class="level4"><a href="#1.5.4">模块初始化</a></li><li class="level4"><a href="#1.5.5">主模块</a></li><li class="level4"><a href="#1.5.6">完整示例</a></li><li class="level3"><a href="#1.6">二进制模块</a></li><li class="level3"><a href="#1.7">小结</a></li><li class="level2"><a href="#2">代码的组织和部署</a></li><li class="level3"><a href="#2.1">模块路径解析规则</a></li><li class="level3"><a href="#2.2">包（package）</a></li><li class="level4"><a href="#2.2.1">index.js</a></li><li class="level4"><a href="#2.2.2">package.json</a></li><li class="level3"><a href="#2.3">命令行程序</a></li><li class="level4"><a href="#2.3.1">*nix</a></li><li class="level4"><a href="#2.3.2">Windows</a></li><li class="level3"><a href="#2.4">工程目录</a></li><li class="level3"><a href="#2.5">NPM</a></li><li class="level4"><a href="#2.5.1">下载三方包</a></li><li class="level4"><a href="#2.5.2">安装命令行程序</a></li><li class="level4"><a href="#2.5.3">发布代码</a></li><li class="level4"><a href="#2.5.4">版本号</a></li><li class="level4"><a href="#2.5.5">灵机一点</a></li><li class="level3"><a href="#2.6">小结</a></li><li class="level2"><a href="#3">文件操作</a></li><li class="level3"><a href="#3.1">开门红</a></li><li class="level4"><a href="#3.1.1">小文件拷贝</a></li><li class="level4"><a href="#3.1.2">大文件拷贝</a></li><li class="level3"><a href="#3.2">API走马观花</a></li><li class="level4"><a href="#3.2.1">Buffer（数据块）</a></li><li class="level4"><a href="#3.2.2">Stream（数据流）</a></li><li class="level4"><a href="#3.2.3">File System（文件系统）</a></li><li class="level4"><a href="#3.2.4">Path（路径）</a></li><li class="level3"><a href="#3.3">遍历目录</a></li><li class="level4"><a href="#3.3.1">递归算法</a></li><li class="level4"><a href="#3.3.2">遍历算法</a></li><li class="level4"><a href="#3.3.3">同步遍历</a></li><li class="level4"><a href="#3.3.4">异步遍历</a></li><li class="level3"><a href="#3.4">文本编码</a></li><li class="level4"><a href="#3.4.1">BOM的移除</a></li><li class="level4"><a href="#3.4.2">GBK转UTF8</a></li><li class="level4"><a href="#3.4.3">单字节编码</a></li><li class="level3"><a href="#3.5">小结</a></li><li class="level2"><a href="#4">网络操作</a></li><li class="level3"><a href="#4.1">开门红</a></li><li class="level3"><a href="#4.2">API走马观花</a></li><li class="level4"><a href="#4.2.1">HTTP</a></li><li class="level4"><a href="#4.2.2">HTTPS</a></li><li class="level4"><a href="#4.2.3">URL</a></li><li class="level4"><a href="#4.2.4">Query String</a></li><li class="level4"><a href="#4.2.5">Zlib</a></li><li class="level4"><a href="#4.2.6">Net</a></li><li class="level3"><a href="#4.3">灵机一点</a></li><li class="level3"><a href="#4.4">小结</a></li><li class="level2"><a href="#5">进程管理</a></li><li class="level3"><a href="#5.1">开门红</a></li><li class="level3"><a href="#5.2">API走马观花</a></li><li class="level4"><a href="#5.2.1">Process</a></li><li class="level4"><a href="#5.2.2">Child Process</a></li><li class="level4"><a href="#5.2.3">Cluster</a></li><li class="level3"><a href="#5.3">应用场景</a></li><li class="level4"><a href="#5.3.1">如何获取命令行参数</a></li><li class="level4"><a href="#5.3.2">如何退出程序</a></li><li class="level4"><a href="#5.3.3">如何控制输入输出</a></li><li class="level4"><a href="#5.3.4">如何降权</a></li><li class="level4"><a href="#5.3.5">如何创建子进程</a></li><li class="level4"><a href="#5.3.6">进程间如何通讯</a></li><li class="level4"><a href="#5.3.7">如何守护子进程</a></li><li class="level3"><a href="#5.4">小结</a></li><li class="level2"><a href="#6">异步编程</a></li><li class="level3"><a href="#6.1">回调</a></li><li class="level3"><a href="#6.2">代码设计模式</a></li><li class="level4"><a href="#6.2.1">函数返回值</a></li><li class="level4"><a href="#6.2.2">遍历数组</a></li><li class="level4"><a href="#6.2.3">异常处理</a></li><li class="level3"><a href="#6.3">域（Domain）</a></li><li class="level4"><a href="#6.3.1">陷阱</a></li><li class="level3"><a href="#6.4">小结</a></li><li class="level2"><a href="#7">大示例</a></li><li class="level3"><a href="#7.1">需求</a></li><li class="level3"><a href="#7.2">第一次迭代</a></li><li class="level4"><a href="#7.2.1">设计</a></li><li class="level4"><a href="#7.2.2">实现</a></li><li class="level3"><a href="#7.3">第二次迭代</a></li><li class="level4"><a href="#7.3.1">设计</a></li><li class="level4"><a href="#7.3.2">实现</a></li><li class="level3"><a href="#7.4">第三次迭代</a></li><li class="level4"><a href="#7.4.1">设计</a></li><li class="level4"><a href="#7.4.2">实现</a></li><li class="level3"><a href="#7.5">第四次迭代</a></li><li class="level4"><a href="#7.5.1">设计</a></li><li class="level4"><a href="#7.5.2">实现</a></li><li class="level3"><a href="#7.6">后续迭代</a></li><li class="level3"><a href="#7.7">小结</a></li></ul>
+<li class="level2"><a href="#1">NodeJS基础</a></li><li class="level3"><a href="#1.1">什么是NodeJS</a></li><li class="level3"><a href="#1.2">有啥用处</a></li><li class="level3"><a href="#1.3">如何安装</a></li><li class="level4"><a href="#1.3.1">安装程序</a></li><li class="level4"><a href="#1.3.2">编译安装</a></li><li class="level3"><a href="#1.4">如何运行</a></li><li class="level4"><a href="#1.4.1">权限问题</a></li><li class="level3"><a href="#1.5">模块</a></li><li class="level4"><a href="#1.5.1">require</a></li><li class="level4"><a href="#1.5.2">exports</a></li><li class="level4"><a href="#1.5.3">module</a></li><li class="level4"><a href="#1.5.4">模块初始化</a></li><li class="level4"><a href="#1.5.5">主模块</a></li><li class="level4"><a href="#1.5.6">完整示例</a></li><li class="level3"><a href="#1.6">二进制模块</a></li><li class="level3"><a href="#1.7">小结</a></li><li class="level2"><a href="#2">代码的组织和部署</a></li><li class="level3"><a href="#2.1">模块路径解析规则</a></li><li class="level3"><a href="#2.2">包（package）</a></li><li class="level4"><a href="#2.2.1">index.js</a></li><li class="level4"><a href="#2.2.2">package.json</a></li><li class="level3"><a href="#2.3">命令行程序</a></li><li class="level4"><a href="#2.3.1">*nix</a></li><li class="level4"><a href="#2.3.2">Windows</a></li><li class="level3"><a href="#2.4">工程目录</a></li><li class="level3"><a href="#2.5">NPM</a></li><li class="level4"><a href="#2.5.1">下载三方包</a></li><li class="level4"><a href="#2.5.2">安装命令行程序</a></li><li class="level4"><a href="#2.5.3">发布代码</a></li><li class="level4"><a href="#2.5.4">版本号</a></li><li class="level4"><a href="#2.5.5">灵机一点</a></li><li class="level3"><a href="#2.6">小结</a></li><li class="level2"><a href="#3">文件操作</a></li><li class="level3"><a href="#3.1">开门红</a></li><li class="level4"><a href="#3.1.1">小文件拷贝</a></li><li class="level4"><a href="#3.1.2">大文件拷贝</a></li><li class="level3"><a href="#3.2">API走马观花</a></li><li class="level4"><a href="#3.2.1">Buffer（数据块）</a></li><li class="level4"><a href="#3.2.2">Stream（数据流）</a></li><li class="level4"><a href="#3.2.3">File System（文件系统）</a></li><li class="level4"><a href="#3.2.4">Path（路径）</a></li><li class="level3"><a href="#3.3">遍历目录</a></li><li class="level4"><a href="#3.3.1">递归算法</a></li><li class="level4"><a href="#3.3.2">遍历算法</a></li><li class="level4"><a href="#3.3.3">同步遍历</a></li><li class="level4"><a href="#3.3.4">异步遍历</a></li><li class="level3"><a href="#3.4">文本编码</a></li><li class="level4"><a href="#3.4.1">BOM的移除</a></li><li class="level4"><a href="#3.4.2">GBK转UTF8</a></li><li class="level4"><a href="#3.4.3">单字节编码</a></li><li class="level3"><a href="#3.5">小结</a></li><li class="level2"><a href="#4">网络操作</a></li><li class="level3"><a href="#4.1">开门红</a></li><li class="level3"><a href="#4.2">API走马观花</a></li><li class="level4"><a href="#4.2.1">HTTP</a></li><li class="level4"><a href="#4.2.2">HTTPS</a></li><li class="level4"><a href="#4.2.3">URL</a></li><li class="level4"><a href="#4.2.4">Query String</a></li><li class="level4"><a href="#4.2.5">Zlib</a></li><li class="level4"><a href="#4.2.6">Net</a></li><li class="level3"><a href="#4.3">灵机一点</a></li><li class="level3"><a href="#4.4">小结</a></li><li class="level2"><a href="#5">进程管理</a></li><li class="level3"><a href="#5.1">开门红</a></li><li class="level3"><a href="#5.2">API走马观花</a></li><li class="level4"><a href="#5.2.1">Process</a></li><li class="level4"><a href="#5.2.2">Child Process</a></li><li class="level4"><a href="#5.2.3">Cluster</a></li><li class="level3"><a href="#5.3">应用场景</a></li><li class="level4"><a href="#5.3.1">如何获取命令行参数</a></li><li class="level4"><a href="#5.3.2">如何退出程序</a></li><li class="level4"><a href="#5.3.3">如何控制输入输出</a></li><li class="level4"><a href="#5.3.4">如何降权</a></li><li class="level4"><a href="#5.3.5">如何创建子进程</a></li><li class="level4"><a href="#5.3.6">进程间如何通讯</a></li><li class="level4"><a href="#5.3.7">如何守护子进程</a></li><li class="level3"><a href="#5.4">小结</a></li><li class="level2"><a href="#6">异步编程</a></li><li class="level3"><a href="#6.1">回调</a></li><li class="level3"><a href="#6.2">代码设计模式</a></li><li class="level4"><a href="#6.2.1">函数返回值</a></li><li class="level4"><a href="#6.2.2">遍历数组</a></li><li class="level4"><a href="#6.2.3">异常处理</a></li><li class="level3"><a href="#6.3">域（Domain）</a></li><li class="level4"><a href="#6.3.1">陷阱</a></li><li class="level3"><a href="#6.4">小结</a></li><li class="level2"><a href="#7">大示例</a></li><li class="level3"><a href="#7.1">需求</a></li><li class="level3"><a href="#7.2">第一次迭代</a></li><li class="level4"><a href="#7.2.1">设计</a></li><li class="level4"><a href="#7.2.2">实现</a></li><li class="level3"><a href="#7.3">第二次迭代</a></li><li class="level4"><a href="#7.3.1">设计</a></li><li class="level4"><a href="#7.3.2">实现</a></li><li class="level3"><a href="#7.4">第三次迭代</a></li><li class="level4"><a href="#7.4.1">设计</a></li><li class="level4"><a href="#7.4.2">实现</a></li><li class="level3"><a href="#7.5">第四次迭代</a></li><li class="level4"><a href="#7.5.1">设计</a></li><li class="level4"><a href="#7.5.2">实现</a></li><li class="level3"><a href="#7.6">后续迭代</a></li><li class="level3"><a href="#7.7">小结</a></li><li class="level2"><a href="#8">关于我们</a></li><li class="level3"><a href="#8.1">工作机会</a></li><li class="level4"><a href="#8.1.1">为什么选择加入我们？</a></li><li class="level4"><a href="#8.1.2">能做些什么事情？</a></li><li class="level4"><a href="#8.1.3">需要具备什么能力？</a></li><li class="level4"><a href="#8.1.4">简历投到哪儿？</a></li></ul>
 
 </nav>
 <article>
@@ -1969,6 +1979,41 @@ fi</code></pre>
 <li><p>不要迷信三方包。任何事情做过头了就不好了，三方包也是一样。三方包是一个黑盒，每多使用一个三方包，就为程序增加了一份潜在风险。并且三方包很难恰好只提供程序需要的功能，每多使用一个三方包，就让程序更加臃肿一些。因此在决定使用某个三方包之前，最好三思而后行。</p>
 </li>
 </ul>
+
+<h2 id="8">关于我们</h2>
+<blockquote>
+<p>   我们是阿里巴巴国际站前端技术部。</p>
+<p>   我们喜爱NodeJS，用NodeJS做了不少好东西，并写下了这篇文章。</p>
+<p>   我们在滨江，俗称大内，相比西溪：</p>
+<p>   这吃饭不排队，停车不收费，通勤不累。</p>
+<p>   如果你也愿意加入我们，趁着还有一些股票可以发，赶紧来吧。 </p>
+</blockquote>
+<h3 id="8.1">工作机会</h3>
+<h4 id="8.1.1">为什么选择加入我们？</h4>
+<ol>
+<li>工资优异：优秀的公司赢利能力，保障你的付出有回报，工资及年终奖肯定让你满意。</li>
+<li>福利丰厚：健全的福利体系，全额公积金、医疗保险、股票期权奖励、iHome无息贷款等。</li>
+<li>升职空间大：有完善的晋升体系，P1-P14，只要你敢想敢做，晋升空间永远放在那儿。</li>
+<li>学习空间大：大牛多，技术氛围浓，技术上可以得到很大提升。</li>
+<li>内部转岗：阿里系下BU多，不同职位，不同BU，只要愿意，随时可以换个发展环境，公司非常鼓励内部转岗。</li>
+</ol>
+<h4 id="8.1.2">能做些什么事情？</h4>
+<ol>
+<li>负责网站应用前端开发，与后台工程师协作，完成数据交互、动态信息展现。</li>
+<li>编写封装良好的前端交互组件，维护及优化网站前端页面性能。</li>
+<li>研究和探索创新的开发思路和最新的前端技术。</li>
+<li>参与新人培训和前端技术布道。</li>
+</ol>
+<h4 id="8.1.3">需要具备什么能力？</h4>
+<ol>
+<li>精通Web前端技术，包括HTML/CSS/JavaScript等，能够解决各种浏览器兼容性问题。</li>
+<li>持续关注业界的新话题和新技术，研究过JQuery、Ext、YUI等框架中的一种或以上。</li>
+<li>重视团队协作，愿意探寻和改进目前还不成熟的前端开发流程，了解各种常用工具。</li>
+<li>热爱前端技术，个性乐观开朗，逻辑性强，善于和各种背景的人沟通合作。</li>
+<li>如具备其它语言的开发经验，比如Java或PHP或Actionscript3/Flex会更受欢迎。</li>
+</ol>
+<h4 id="8.1.4">简历投到哪儿？</h4>
+<p>请把你的简历发送至<a href="mailto:nanqiao.dengnq@alibaba-inc.com">nanqiao.dengnq@alibaba-inc.com</a>，我们会尽快与你联系，谢谢。</p>
 
 </article>
 <footer>
