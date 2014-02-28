@@ -9,7 +9,7 @@
 >
 >	这吃饭不排队，停车不收费，通勤不累。
 >
->	如果你也愿意加入我们，趁着还有一些股票可以发，赶紧发送简历至[nanqiao.dengnq@alibaba-inc.com](mailto:nanqiao.dengnq@alibaba-inc.com)，我们会尽快与你联系，谢谢。
+>	如果你也愿意加入我们，趁着还有一些股票可以发，赶紧发送简历至[nanqiao.dengnq@alibaba-inc.com](mailto:nanqiao.dengnq@alibaba-inc.com)，通过后我们会尽快与你联系，谢谢。
 
 
 ### 工作机会
