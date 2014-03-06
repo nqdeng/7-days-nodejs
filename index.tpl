@@ -163,6 +163,12 @@ article ul, article ol {
 padding-left: 2em;
 }
 
+footer {
+border-top: 1px solid #ccc;
+font-size: 10pt;
+margin-top: 4em;
+}
+
 @media (max-width: 768px) {
 
 body {
