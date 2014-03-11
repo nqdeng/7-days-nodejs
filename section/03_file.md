@@ -102,7 +102,7 @@ JS语言自身只有字符串数据类型，没有二进制数据类型，因此
 
 #### Stream（数据流）
 
->	**官方文档： ** [http://nodejs.org/api/buffer.html](http://nodejs.org/api/stream.html)
+>	**官方文档： ** [http://nodejs.org/api/stream.html](http://nodejs.org/api/stream.html)
 
 当内存中无法一次装下需要处理的数据时，或者一边读取一边处理更加高效时，我们就需要用到数据流。NodeJS中通过各种`Stream`来提供对数据流的操作。
 
@@ -173,7 +173,7 @@ JS语言自身只有字符串数据类型，没有二进制数据类型，因此
 
 #### File System（文件系统）
 
->	**官方文档： ** [http://nodejs.org/api/buffer.html](http://nodejs.org/api/fs.html)
+>	**官方文档： ** [http://nodejs.org/api/fs.html](http://nodejs.org/api/fs.html)
 
 NodeJS通过`fs`内置模块提供对文件的操作。`fs`模块提供的API基本上可以分为以下三类：
 
@@ -214,7 +214,7 @@ NodeJS最精华的异步IO模型在`fs`模块里有着充分的体现，例如�
 
 #### Path（路径）
 
->	**官方文档： ** [http://nodejs.org/api/buffer.html](http://nodejs.org/api/path.html)
+>	**官方文档： ** [http://nodejs.org/api/path.html](http://nodejs.org/api/path.html)
 
 操作文件时难免不与文件路径打交道。NodeJS提供了`path`内置模块来简化路径相关操作，并提升代码可读性。以下分别介绍几个常用的API。
 
