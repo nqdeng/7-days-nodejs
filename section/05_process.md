@@ -79,7 +79,7 @@ NodeJS程序的标准输入流（stdin）、一个标准输出流（stdout）、
 
 #### 如何降权
 
-在*nix系统下，我们知道需要使用root权限才能监听1024以下端口。但是一旦完成端口监听后，继续让程序运行在root权限下存在安全隐患，因此最好能把权限降下来。以下是这样一个例子。
+在Linux系统下，我们知道需要使用root权限才能监听1024以下端口。但是一旦完成端口监听后，继续让程序运行在root权限下存在安全隐患，因此最好能把权限降下来。以下是这样一个例子。
 
 	http.createServer(callback).listen(80, function () {
 		var env = process.env,
@@ -122,7 +122,7 @@ NodeJS程序的标准输入流（stdin）、一个标准输出流（stdout）、
 
 #### 进程间如何通讯
 
-在*nix系统下，进程之间可以通过信号互相通信。以下是一个例子。
+在Linux系统下，进程之间可以通过信号互相通信。以下是一个例子。
 
 	/* parent.js */
 	var child = child_process.spawn('node', [ 'child.js' ]);

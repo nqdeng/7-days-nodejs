@@ -21,7 +21,7 @@
 
 3. NODE_PATH环境变量
 
-	与PATH环境变量类似，NodeJS允许通过NODE_PATH环境变量来指定额外的模块搜索路径。NODE_PATH环境变量中包含一到多个目录路径，路径之间在*nix下使用`:`分隔，在Windows下使用`;`分隔。例如定义了以下NODE_PATH环境变量：
+	与PATH环境变量类似，NodeJS允许通过NODE_PATH环境变量来指定额外的模块搜索路径。NODE_PATH环境变量中包含一到多个目录路径，路径之间在Linux下使用`:`分隔，在Windows下使用`;`分隔。例如定义了以下NODE_PATH环境变量：
 
 		NODE_PATH=/home/user/lib:/home/lib
 
@@ -102,9 +102,9 @@
 
 	$ node-echo Hello World
 
-#### *nix
+#### Linux
 
-在*nix系统下，我们可以把JS文件当作shell脚本来运行，从而达到上述目的，具体步骤如下：
+在Linux系统下，我们可以把JS文件当作shell脚本来运行，从而达到上述目的，具体步骤如下：
 
 1. 在shell脚本中，可以通过`#!`注释来指定当前脚本使用的解析器。所以我们首先在`node-echo.js`文件顶部增加以下一行注释，表明当前脚本使用NodeJS解析。
 
@@ -222,9 +222,9 @@ NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署�
 
 	$ npm install node-echo -g
 
-参数中的`-g`表示全局安装，因此`node-echo`会默认安装到以下位置，并且NPM会自动创建好*nix系统下需要的软链文件或Windows系统下需要的`.cmd`文件。
+参数中的`-g`表示全局安装，因此`node-echo`会默认安装到以下位置，并且NPM会自动创建好Linux系统下需要的软链文件或Windows系统下需要的`.cmd`文件。
 
-	- /usr/local/               # *nix系统下
+	- /usr/local/               # Linux系统下
 		- lib/node_modules/
 			+ node-echo/
 			...
