@@ -243,13 +243,11 @@ display: none;
 </head>
 <body>
 <header>
-<a href="#8" class="banner">提供给NodeJS爱好者的一份工作机会</a>
 <x-markdown src="section/00_header.md" />
 </header>
 <nav>
 <div class="menubar">
 <a class="button">&#9776;&nbsp;索引</a>
-<a href="#8" class="banner">提供给NodeJS爱好者的一份工作机会</a>
 </div>
 <x-index />
 </nav>
@@ -261,7 +259,6 @@ display: none;
 <x-markdown src="section/05_process.md" />
 <x-markdown src="section/06_async_programming.md" />
 <x-markdown src="section/07_example.md" />
-<x-markdown src="section/08_job.md" />
 </article>
 <footer>
 <x-markdown src="section/99_footer.md" />
