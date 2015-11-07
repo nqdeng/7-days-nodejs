@@ -72,7 +72,7 @@ HTTP请求本质上是一个数据流，由请求头（headers）和请求体（
 	  'content-type': 'application/x-www-form-urlencoded' }
 	Hello World
 
-HTTP响应本质上也是一个数据流，同样由响应头（headers）和响应体（body）组成。例如以下是一个完整的HTTP请求数据内容。
+HTTP响应本质上也是一个数据流，同样由响应头（headers）和响应体（body）组成。例如以下是一个完整的HTTP响应数据内容。
 
 	HTTP/1.1 200 OK
 	Content-Type: text/plain
