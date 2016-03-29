@@ -91,7 +91,7 @@ NodeJS最大的卖点——事件机制和异步IO，对开发者并不是透明
 		});
 	});
 
-可以看到，这种方式就是一个回调函数套一个回调函多，套得太多了很容易写出`>`形状的代码。
+可以看到，这种方式就是一个回调函数套一个回调函数，套得太多了很容易写出`>`形状的代码。
 
 #### 遍历数组
 
@@ -104,7 +104,7 @@ NodeJS最大的卖点——事件机制和异步IO，对开发者并不是透明
 		arr[i] = sync(arr[i]);
 	}
 
-	// All array items have processed.
+	// All array items have been processed.
 
 如果函数是异步执行的，以上代码就无法保证循环结束后所有数组成员都处理完毕了。如果数组成员必须一个接一个串行处理，则一般按照以下方式编写异步代码：
 
@@ -118,7 +118,7 @@ NodeJS最大的卖点——事件机制和异步IO，对开发者并不是透明
 			callback();
 		}
 	}(0, arr.length, function () {
-		// All array items have processed.
+		// All array items have been processed.
 	}));
 
 可以看到，以上代码在异步函数执行一次并返回执行结果后才传入下一个数组成员并开始下一轮执行，直到所有数组成员处理完毕后，通过回调的方式触发后续代码的执行。
@@ -137,7 +137,7 @@ NodeJS最大的卖点——事件机制和异步IO，对开发者并不是透明
 			}(i));
 		}
 	}(0, arr.length, 0, function () {
-		// All array items have processed.
+		// All array items have been processed.
 	}));
 
 可以看到，与异步串行遍历的版本相比，以上代码并行处理所有数组成员，并通过计数器变量来判断什么时候所有数组成员都处理完毕了。
