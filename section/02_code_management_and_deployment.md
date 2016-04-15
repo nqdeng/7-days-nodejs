@@ -164,7 +164,7 @@
 		"main": "./lib/echo.js"
 	}
 
-以上例子中分类存放了不同类型的文件，并通过`node_moudles`目录直接使用三方包名加载模块。此外，定义了`package.json`之后，`node-echo`目录也可被当作一个包来使用。
+以上例子中分类存放了不同类型的文件，并通过`node_modules`目录直接使用三方包名加载模块。此外，定义了`package.json`之后，`node-echo`目录也可被当作一个包来使用。
 
 ### NPM
 
