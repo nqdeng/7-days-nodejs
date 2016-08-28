@@ -2,18 +2,39 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 <title>七天学会NodeJS</title>
 <style>
 body {
-font-family: Tahoma;
-font-size: 10pt;
+color: #333;
+font-family: sans-serif;
+font-size: 12pt;
 line-height: 170%;
-padding: 0 10pt;
+padding: 0 30px 0 270px;
+}
+
+header .banner {
+margin: 0 0 1em 0;
+}
+
+header .banner, nav .banner {
+color: #777;
+font-size: 10pt;
+font-weight: bold;
+}
+
+header h1 {
+background: #0c3;
+border-radius: 4px;
+color: #fff;
+font-size: 24pt;
+margin: 0;
+padding: 1.2em 0;
+text-align: center;
 }
 
 nav {
-background: gray;
-color: white;
+font-size: 10pt;
 overflow-x: hidden;
 overflow-y: auto;
 position: fixed;
@@ -23,95 +44,39 @@ bottom: 0;
 width: 240px;
 }
 
-header {
-padding-left: 240px;
+nav .menubar {
+border-bottom: solid 1px #ccc;
+display: none;
+height: 48px;
+line-height: 48px;
+padding: 0 10px;
 }
 
-header h1 {
-background: #ccffcc;
-border-radius: 15px;
-color: #006600;
-font-size: 18pt;
-margin: 0;
-padding: 1.5em;
-text-align: center;
-}
-
-article {
-padding-left: 240px;
-}
-
-article h2 {
-border-bottom: dotted 1px #777;
-color: #006600;
-font-size: 12pt;
-margin: 4em 0 1em 0;
-padding: 0 0 0.3em 0;
-}
-
-article h3 {
-border-left: 4px solid #ff6666;
-color: #000;
-font-size: 11pt;
-line-height: 100%;
-margin: 1em 0;
-padding: 0 0 0 0.5em;
-}
-
-article h4 {
-color: #000;
+nav .button {
+background: #777;
+border: 1px solid #333;
+color: #fff;
 font-size: 10pt;
-margin: 1em 0;
-padding: 0;
-}
-
-article p {
-margin: 1em 0;
-}
-
-article p code {
-background: #eee;
-border: 1px solid #ccc;
-}
-
-article p strong {
-color: #f00;
-}
-
-article pre {
-background: #eee;
-border-left: solid 2px #3c0;
-color: #000;
-margin: 1em 0;
-padding: 0 0 0 1em;
-overflow-x: auto;
-overflow-y: padding;
-}
-
-article blockquote {
-background: #fff;
-border: dashed 1px #777;
-border-left: solid 2px #777;
-color: #000;
-margin: 0;
-padding: 0 0 0 1em;
+font-weight: bold;
+padding: 8px;
+border-radius: 4px;
 }
 
 nav ul {
-margin: 10px;
-padding: 0;
+padding: 0 0 0 10px;
 }
 
-nav a {
-color: white;
+nav ul a {
+color: #333;
 text-decoration: none;
 }
 
-nav a:hover {
+nav ul a:hover {
 text-decoration: underline;
 }
 
 nav li {
+line-height: 180%;
 list-style: none;
 margin: 0;
 padding: 0;
@@ -134,23 +99,159 @@ nav .level4 {
 padding-left: 2em;
 }
 
-nav .level4:before { 
+nav .level4:before {
 content: "› ";
 }
 
+article h2 {
+border-bottom: dotted 1px #777;
+font-size: 12pt;
+line-height: 100%;
+margin: 4em 0 1em 0;
+padding: 0 0 0.3em 0;
+}
+
+article h3 {
+font-size: 12pt;
+line-height: 100%;
+margin: 2em 0 1em 0;
+padding: 0;
+}
+
+article h4 {
+font-size: 12pt;
+font-style:italic;
+font-weight: normal;
+line-height: 100%;
+margin: 1.2em 0 1em 0;
+padding: 0;
+}
+
+article p {
+margin: 1em 0;
+}
+
+article p code {
+background: #eee;
+border: 1px solid #ccc;
+}
+
+article p strong {
+color: #f00;
+}
+
+article pre {
+background: #eee;
+border-left: solid 2px #3c0;
+font-size: 10pt;
+margin: 1em 0;
+padding: 0 0 0 1em;
+overflow-x: auto;
+overflow-y: padding;
+}
+
+article blockquote {
+background: #fff;
+border: dashed 1px #777;
+border-left: solid 2px #777;
+color: #000;
+margin: 0;
+padding: 0 0 0 1em;
+}
+
+article ul, article ol {
+padding-left: 2em;
+}
+
 footer {
-padding-left: 240px;
+border-top: 1px solid #ccc;
+font-size: 10pt;
+margin-top: 4em;
+}
+
+@media (max-width: 768px) {
+
+body {
+padding: 0 10px 0 230px;
+}
+
+nav {
+width: 230px;
+}
+
+}
+
+@media (max-width: 480px) {
+
+body {
+padding: 64px 10px 0 10px;
+}
+
+header .banner {
+display: none;
+}
+
+nav {
+position: absolute;
+width: 100%;
+}
+
+nav .menubar {
+display: block;
+}
+
+nav .banner {
+float: right;
+}
+
+nav ul {
+background: #fff;
+display: none;
+font-size: 14pt;
+margin: 0;
+padding: 0 0 0 8px;
+}
+
+nav .level2 {
+font-size: 16pt;
+font-weight: bold;
+}
+
+nav li {
+line-height: 240%;
+}
+
+.index nav ul {
+display: block;
+}
+
+.index article {
+display: none;
+}
+
 }
 </style>
+<script>
+  (function (tags) {
+    var i = 0, len = tags.length;
+
+    for (; i < len; ++i) {
+        document.createElement(tags[i]);
+    }
+  }([ 'header', 'nav', 'article', 'footer' ]));
+</script>
 </head>
 <body>
 <header>
-<h1>七天学会NodeJS</h1>
+<h1 id="-nodejs">七天学会NodeJS</h1>
 
 </header>
 <nav>
+<div class="menubar">
+<a class="button">&#9776;&nbsp;索引</a>
+</div>
 <ul>
-<li class="level2"><a href="#1">NodeJS基础</a></li><li class="level3"><a href="#1.1">什么是NodeJS</a></li><li class="level3"><a href="#1.2">有啥用处</a></li><li class="level3"><a href="#1.3">如何安装</a></li><li class="level4"><a href="#1.3.1">安装程序</a></li><li class="level4"><a href="#1.3.2">编译安装</a></li><li class="level3"><a href="#1.4">如何运行</a></li><li class="level4"><a href="#1.4.1">权限问题</a></li><li class="level3"><a href="#1.5">模块</a></li><li class="level4"><a href="#1.5.1">require</a></li><li class="level4"><a href="#1.5.2">exports</a></li><li class="level4"><a href="#1.5.3">module</a></li><li class="level4"><a href="#1.5.4">模块初始化</a></li><li class="level4"><a href="#1.5.5">主模块</a></li><li class="level4"><a href="#1.5.6">完整示例</a></li><li class="level3"><a href="#1.6">二进制模块</a></li><li class="level3"><a href="#1.7">小结</a></li><li class="level2"><a href="#2">代码的组织和部署</a></li><li class="level3"><a href="#2.1">模块路径解析规则</a></li><li class="level3"><a href="#2.2">包（package）</a></li><li class="level4"><a href="#2.2.1">index.js</a></li><li class="level4"><a href="#2.2.2">package.json</a></li><li class="level3"><a href="#2.3">命令行程序</a></li><li class="level4"><a href="#2.3.1">*nix</a></li><li class="level4"><a href="#2.3.2">Windows</a></li><li class="level3"><a href="#2.4">工程目录</a></li><li class="level3"><a href="#2.5">NPM</a></li><li class="level4"><a href="#2.5.1">下载三方包</a></li><li class="level4"><a href="#2.5.2">安装命令行程序</a></li><li class="level4"><a href="#2.5.3">发布代码</a></li><li class="level4"><a href="#2.5.4">版本号</a></li><li class="level4"><a href="#2.5.5">灵机一点</a></li><li class="level3"><a href="#2.6">小结</a></li><li class="level2"><a href="#3">文件操作</a></li><li class="level3"><a href="#3.1">开门红</a></li><li class="level4"><a href="#3.1.1">小文件拷贝</a></li><li class="level4"><a href="#3.1.2">大文件拷贝</a></li><li class="level3"><a href="#3.2">API走马观花</a></li><li class="level4"><a href="#3.2.1">Buffer（数据块）</a></li><li class="level4"><a href="#3.2.2">Stream（数据流）</a></li><li class="level4"><a href="#3.2.3">File System（文件系统）</a></li><li class="level4"><a href="#3.2.4">Path（路径）</a></li><li class="level3"><a href="#3.3">遍历目录</a></li><li class="level4"><a href="#3.3.1">递归算法</a></li><li class="level4"><a href="#3.3.2">遍历算法</a></li><li class="level4"><a href="#3.3.3">同步遍历</a></li><li class="level4"><a href="#3.3.4">异步遍历</a></li><li class="level3"><a href="#3.4">文本编码</a></li><li class="level4"><a href="#3.4.1">BOM的移除</a></li><li class="level4"><a href="#3.4.2">GBK转UTF8</a></li><li class="level4"><a href="#3.4.3">单字节编码</a></li><li class="level3"><a href="#3.5">小结</a></li><li class="level2"><a href="#4">网络操作</a></li><li class="level3"><a href="#4.1">开门红</a></li><li class="level3"><a href="#4.2">API走马观花</a></li><li class="level4"><a href="#4.2.1">HTTP</a></li><li class="level4"><a href="#4.2.2">HTTPS</a></li><li class="level4"><a href="#4.2.3">URL</a></li><li class="level4"><a href="#4.2.4">Query String</a></li><li class="level4"><a href="#4.2.5">Zlib</a></li><li class="level4"><a href="#4.2.6">Net</a></li><li class="level3"><a href="#4.3">灵机一点</a></li><li class="level3"><a href="#4.4">小结</a></li><li class="level2"><a href="#5">进程管理</a></li><li class="level3"><a href="#5.1">开门红</a></li><li class="level3"><a href="#5.2">API走马观花</a></li><li class="level4"><a href="#5.2.1">Process</a></li><li class="level4"><a href="#5.2.2">Child Process</a></li><li class="level4"><a href="#5.2.3">Cluster</a></li><li class="level3"><a href="#5.3">应用场景</a></li><li class="level4"><a href="#5.3.1">如何获取命令行参数</a></li><li class="level4"><a href="#5.3.2">如何退出程序</a></li><li class="level4"><a href="#5.3.3">如何控制输入输出</a></li><li class="level4"><a href="#5.3.4">如何降权</a></li><li class="level4"><a href="#5.3.5">如何创建子进程</a></li><li class="level4"><a href="#5.3.6">进程间如何通讯</a></li><li class="level4"><a href="#5.3.7">如何守护子进程</a></li><li class="level3"><a href="#5.4">小结</a></li><li class="level2"><a href="#6">异步编程</a></li><li class="level3"><a href="#6.1">回调</a></li><li class="level3"><a href="#6.2">代码设计模式</a></li><li class="level4"><a href="#6.2.1">函数返回值</a></li><li class="level4"><a href="#6.2.2">遍历数组</a></li><li class="level4"><a href="#6.2.3">异常处理</a></li><li class="level3"><a href="#6.3">域（Domain）</a></li><li class="level4"><a href="#6.3.1">陷阱</a></li><li class="level3"><a href="#6.4">小结</a></li><li class="level2"><a href="#7">大示例</a></li><li class="level3"><a href="#7.1">需求</a></li><li class="level3"><a href="#7.2">第一次迭代</a></li><li class="level4"><a href="#7.2.1">设计</a></li><li class="level4"><a href="#7.2.2">实现</a></li><li class="level3"><a href="#7.3">第二次迭代</a></li><li class="level4"><a href="#7.3.1">设计</a></li><li class="level4"><a href="#7.3.2">实现</a></li><li class="level3"><a href="#7.4">第三次迭代</a></li><li class="level4"><a href="#7.4.1">设计</a></li><li class="level4"><a href="#7.4.2">实现</a></li><li class="level3"><a href="#7.5">第四次迭代</a></li><li class="level4"><a href="#7.5.1">设计</a></li><li class="level4"><a href="#7.5.2">实现</a></li><li class="level3"><a href="#7.6">后续迭代</a></li><li class="level3"><a href="#7.7">小结</a></li></ul>
+<li class="level2"><a href="#1">NodeJS基础</a></li><li class="level3"><a href="#1.1">什么是NodeJS</a></li><li class="level3"><a href="#1.2">有啥用处</a></li><li class="level3"><a href="#1.3">如何安装</a></li><li class="level4"><a href="#1.3.1">安装程序</a></li><li class="level4"><a href="#1.3.2">编译安装</a></li><li class="level3"><a href="#1.4">如何运行</a></li><li class="level4"><a href="#1.4.1">权限问题</a></li><li class="level3"><a href="#1.5">模块</a></li><li class="level4"><a href="#1.5.1">require</a></li><li class="level4"><a href="#1.5.2">exports</a></li><li class="level4"><a href="#1.5.3">module</a></li><li class="level4"><a href="#1.5.4">模块初始化</a></li><li class="level4"><a href="#1.5.5">主模块</a></li><li class="level4"><a href="#1.5.6">完整示例</a></li><li class="level3"><a href="#1.6">二进制模块</a></li><li class="level3"><a href="#1.7">小结</a></li><li class="level2"><a href="#2">代码的组织和部署</a></li><li class="level3"><a href="#2.1">模块路径解析规则</a></li><li class="level3"><a href="#2.2">包（package）</a></li><li class="level4"><a href="#2.2.1">index.js</a></li><li class="level4"><a href="#2.2.2">package.json</a></li><li class="level3"><a href="#2.3">命令行程序</a></li><li class="level4"><a href="#2.3.1">Linux</a></li><li class="level4"><a href="#2.3.2">Windows</a></li><li class="level3"><a href="#2.4">工程目录</a></li><li class="level3"><a href="#2.5">NPM</a></li><li class="level4"><a href="#2.5.1">下载三方包</a></li><li class="level4"><a href="#2.5.2">安装命令行程序</a></li><li class="level4"><a href="#2.5.3">发布代码</a></li><li class="level4"><a href="#2.5.4">版本号</a></li><li class="level4"><a href="#2.5.5">灵机一点</a></li><li class="level3"><a href="#2.6">小结</a></li><li class="level2"><a href="#3">文件操作</a></li><li class="level3"><a href="#3.1">开门红</a></li><li class="level4"><a href="#3.1.1">小文件拷贝</a></li><li class="level4"><a href="#3.1.2">大文件拷贝</a></li><li class="level3"><a href="#3.2">API走马观花</a></li><li class="level4"><a href="#3.2.1">Buffer（数据块）</a></li><li class="level4"><a href="#3.2.2">Stream（数据流）</a></li><li class="level4"><a href="#3.2.3">File System（文件系统）</a></li><li class="level4"><a href="#3.2.4">Path（路径）</a></li><li class="level3"><a href="#3.3">遍历目录</a></li><li class="level4"><a href="#3.3.1">递归算法</a></li><li class="level4"><a href="#3.3.2">遍历算法</a></li><li class="level4"><a href="#3.3.3">同步遍历</a></li><li class="level4"><a href="#3.3.4">异步遍历</a></li><li class="level3"><a href="#3.4">文本编码</a></li><li class="level4"><a href="#3.4.1">BOM的移除</a></li><li class="level4"><a href="#3.4.2">GBK转UTF8</a></li><li class="level4"><a href="#3.4.3">单字节编码</a></li><li class="level3"><a href="#3.5">小结</a></li><li class="level2"><a href="#4">网络操作</a></li><li class="level3"><a href="#4.1">开门红</a></li><li class="level3"><a href="#4.2">API走马观花</a></li><li class="level4"><a href="#4.2.1">HTTP</a></li><li class="level4"><a href="#4.2.2">HTTPS</a></li><li class="level4"><a href="#4.2.3">URL</a></li><li class="level4"><a href="#4.2.4">Query String</a></li><li class="level4"><a href="#4.2.5">Zlib</a></li><li class="level4"><a href="#4.2.6">Net</a></li><li class="level3"><a href="#4.3">灵机一点</a></li><li class="level3"><a href="#4.4">小结</a></li><li class="level2"><a href="#5">进程管理</a></li><li class="level3"><a href="#5.1">开门红</a></li><li class="level3"><a href="#5.2">API走马观花</a></li><li class="level4"><a href="#5.2.1">Process</a></li><li class="level4"><a href="#5.2.2">Child Process</a></li><li class="level4"><a href="#5.2.3">Cluster</a></li><li class="level3"><a href="#5.3">应用场景</a></li><li class="level4"><a href="#5.3.1">如何获取命令行参数</a></li><li class="level4"><a href="#5.3.2">如何退出程序</a></li><li class="level4"><a href="#5.3.3">如何控制输入输出</a></li><li class="level4"><a href="#5.3.4">如何降权</a></li><li class="level4"><a href="#5.3.5">如何创建子进程</a></li><li class="level4"><a href="#5.3.6">进程间如何通讯</a></li><li class="level4"><a href="#5.3.7">如何守护子进程</a></li><li class="level3"><a href="#5.4">小结</a></li><li class="level2"><a href="#6">异步编程</a></li><li class="level3"><a href="#6.1">回调</a></li><li class="level3"><a href="#6.2">代码设计模式</a></li><li class="level4"><a href="#6.2.1">函数返回值</a></li><li class="level4"><a href="#6.2.2">遍历数组</a></li><li class="level4"><a href="#6.2.3">异常处理</a></li><li class="level3"><a href="#6.3">域（Domain）</a></li><li class="level4"><a href="#6.3.1">陷阱</a></li><li class="level3"><a href="#6.4">小结</a></li><li class="level2"><a href="#7">大示例</a></li><li class="level3"><a href="#7.1">需求</a></li><li class="level3"><a href="#7.2">第一次迭代</a></li><li class="level4"><a href="#7.2.1">设计</a></li><li class="level4"><a href="#7.2.2">实现</a></li><li class="level3"><a href="#7.3">第二次迭代</a></li><li class="level4"><a href="#7.3.1">设计</a></li><li class="level4"><a href="#7.3.2">实现</a></li><li class="level3"><a href="#7.4">第三次迭代</a></li><li class="level4"><a href="#7.4.1">设计</a></li><li class="level4"><a href="#7.4.2">实现</a></li><li class="level3"><a href="#7.5">第四次迭代</a></li><li class="level4"><a href="#7.5.1">设计</a></li><li class="level4"><a href="#7.5.2">实现</a></li><li class="level3"><a href="#7.6">后续迭代</a></li><li class="level3"><a href="#7.7">小结</a></li></ul>
 
 </nav>
 <article>
@@ -212,7 +313,7 @@ var foo3 = require(&#39;/home/user/foo&#39;);
 var foo4 = require(&#39;/home/user/foo.js&#39;);
 
 // foo1至foo4中保存的是同一个模块的导出对象。</code></pre>
-<p>另外，可以使用以下方式加载和使用一个JSON文件，模块名中<code>.json</code>扩展名不可省略。</p>
+<p>另外，可以使用以下方式加载和使用一个JSON文件。</p>
 <pre><code>var data = require(&#39;./data.json&#39;);</code></pre>
 <h4 id="1.5.2">exports</h4>
 <p><code>exports</code>对象是当前模块的导出对象，用于导出模块公有方法和属性。别的模块通过<code>require</code>函数使用当前模块时得到的就是当前模块的<code>exports</code>对象。以下例子中导出了一个公有方法。</p>
@@ -288,7 +389,7 @@ console.log(counter2.count());</code></pre>
  /node_modules/foo/bar</code></pre>
 </li>
 <li><p>NODE_PATH环境变量</p>
-<p> 与PATH环境变量类似，NodeJS允许通过NODE_PATH环境变量来指定额外的模块搜索路径。NODE_PATH环境变量中包含一到多个目录路径，路径之间在*nix下使用<code>:</code>分隔，在Windows下使用<code>;</code>分隔。例如定义了以下NODE_PATH环境变量：</p>
+<p> 与PATH环境变量类似，NodeJS允许通过NODE_PATH环境变量来指定额外的模块搜索路径。NODE_PATH环境变量中包含一到多个目录路径，路径之间在Linux下使用<code>:</code>分隔，在Windows下使用<code>;</code>分隔。例如定义了以下NODE_PATH环境变量：</p>
 <pre><code> NODE_PATH=/home/user/lib:/home/lib</code></pre>
 <p> 当使用<code>require(&#39;foo/bar&#39;)</code>的方式加载模块时，则NodeJS依次尝试以下路径。</p>
 <pre><code> /home/user/lib/foo/bar
@@ -344,8 +445,8 @@ var cat = require(&#39;/home/user/lib/cat/index&#39;);</code></pre>
 Hello World</code></pre>
 <p>这种使用方式看起来不怎么像是一个命令行程序，下边的才是我们期望的方式。</p>
 <pre><code>$ node-echo Hello World</code></pre>
-<h4 id="2.3.1">*nix</h4>
-<p>在*nix系统下，我们可以把JS文件当作shell脚本来运行，从而达到上述目的，具体步骤如下：</p>
+<h4 id="2.3.1">Linux</h4>
+<p>在Linux系统下，我们可以把JS文件当作shell脚本来运行，从而达到上述目的，具体步骤如下：</p>
 <ol>
 <li><p>在shell脚本中，可以通过<code>#!</code>注释来指定当前脚本使用的解析器。所以我们首先在<code>node-echo.js</code>文件顶部增加以下一行注释，表明当前脚本使用NodeJS解析。</p>
 <pre><code> #! /usr/bin/env node</code></pre>
@@ -434,8 +535,8 @@ argv@0.0.1 node_modules\argv</code></pre>
 <h4 id="2.5.2">安装命令行程序</h4>
 <p>从NPM服务上下载安装一个命令行程序的方法与三方包类似。例如上例中的<code>node-echo</code>提供了命令行使用方式，只要<code>node-echo</code>自己配置好了相关的<code>package.json</code>字段，对于用户而言，只需要使用以下命令安装程序。</p>
 <pre><code>$ npm install node-echo -g</code></pre>
-<p>参数中的<code>-g</code>表示全局安装，因此<code>node-echo</code>会默认安装到以下位置，并且NPM会自动创建好*nix系统下需要的软链文件或Windows系统下需要的<code>.cmd</code>文件。</p>
-<pre><code>- /usr/local/               # *nix系统下
+<p>参数中的<code>-g</code>表示全局安装，因此<code>node-echo</code>会默认安装到以下位置，并且NPM会自动创建好Linux系统下需要的软链文件或Windows系统下需要的<code>.cmd</code>文件。</p>
+<pre><code>- /usr/local/               # Linux系统下
     - lib/node_modules/
         + node-echo/
         ...
@@ -496,7 +597,7 @@ argv@0.0.1 node_modules\argv</code></pre>
 <ul>
 <li><p>编写代码前先规划好目录结构，才能做到有条不紊。</p>
 </li>
-<li><p>捎大些的程序可以将代码拆分为多个模块管理，更大些的程序可以使用包来组织模块。</p>
+<li><p>稍大些的程序可以将代码拆分为多个模块管理，更大些的程序可以使用包来组织模块。</p>
 </li>
 <li><p>合理使用<code>node_modules</code>和<code>NODE_PATH</code>来解耦包的使用方式和物理路径。</p>
 </li>
@@ -548,9 +649,9 @@ main(process.argv.slice(2));</code></pre>
 <p>   <strong>官方文档： </strong> <a href="http://nodejs.org/api/buffer.html"><a href="http://nodejs.org/api/buffer.html">http://nodejs.org/api/buffer.html</a></a></p>
 </blockquote>
 <p>JS语言自身只有字符串数据类型，没有二进制数据类型，因此NodeJS提供了一个与<code>String</code>对等的全局构造函数<code>Buffer</code>来提供对二进制数据的操作。除了可以读取文件得到<code>Buffer</code>的实例外，还能够直接构造，例如：</p>
-<pre><code>var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]);</code></pre>
+<pre><code>var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);</code></pre>
 <p><code>Buffer</code>与字符串类似，除了可以用<code>.length</code>属性得到字节长度外，还可以用<code>[index]</code>方式读取指定位置的字节，例如：</p>
-<pre><code>bin[0]; // =&gt; 0x48;</code></pre>
+<pre><code>bin[0]; // =&gt; 0x68;</code></pre>
 <p><code>Buffer</code>与字符串能够互相转化，例如可以使用指定编码将二进制数据转化为字符串：</p>
 <pre><code>var str = bin.toString(&#39;utf-8&#39;); // =&gt; &quot;hello&quot;</code></pre>
 <p>或者反过来，将字符串转换为指定编码下的二进制数据：</p>
@@ -558,28 +659,28 @@ main(process.argv.slice(2));</code></pre>
 <p><code>Buffer</code>与字符串有一个重要区别。字符串是只读的，并且对字符串的任何修改得到的都是一个新字符串，原字符串保持不变。至于<code>Buffer</code>，更像是可以做指针操作的C语言数组。例如，可以用<code>[index]</code>方式直接修改某个位置的字节。</p>
 <pre><code>bin[0] = 0x48;</code></pre>
 <p>而<code>.slice</code>方法也不是返回一个新的<code>Buffer</code>，而更像是返回了指向原<code>Buffer</code>中间的某个位置的指针，如下所示。</p>
-<pre><code>[ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]
+<pre><code>[ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]
     ^           ^
     |           |
    bin     bin.slice(2)</code></pre>
 <p>因此对<code>.slice</code>方法返回的<code>Buffer</code>的修改会作用于原<code>Buffer</code>，例如：</p>
-<pre><code>var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]);
+<pre><code>var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);
 var sub = bin.slice(2);
 
 sub[0] = 0x65;
-console.log(bin); // =&gt; &lt;Buffer 48 65 65 6c 6f&gt;</code></pre>
+console.log(bin); // =&gt; &lt;Buffer 68 65 65 6c 6f&gt;</code></pre>
 <p>也因此，如果想要拷贝一份<code>Buffer</code>，得首先创建一个新的<code>Buffer</code>，并通过<code>.copy</code>方法把原<code>Buffer</code>中的数据复制过去。这个类似于申请一块新的内存，并把已有内存中的数据复制过去。以下是一个例子。</p>
-<pre><code>var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]);
+<pre><code>var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);
 var dup = new Buffer(bin.length);
 
 bin.copy(dup);
-dup[0] = 0x68;
-console.log(bin); // =&gt; &lt;Buffer 48 65 6c 6c 6f&gt;
-console.log(dup); // =&gt; &lt;Buffer 68 65 65 6c 6f&gt;</code></pre>
+dup[0] = 0x48;
+console.log(bin); // =&gt; &lt;Buffer 68 65 6c 6c 6f&gt;
+console.log(dup); // =&gt; &lt;Buffer 48 65 65 6c 6f&gt;</code></pre>
 <p>总之，<code>Buffer</code>将JS的数据处理能力从字符串扩展到了任意二进制数据。</p>
 <h4 id="3.2.2">Stream（数据流）</h4>
 <blockquote>
-<p>   <strong>官方文档： </strong> <a href="http://nodejs.org/api/stream.html"><a href="http://nodejs.org/api/buffer.html">http://nodejs.org/api/buffer.html</a></a></p>
+<p>   <strong>官方文档： </strong> <a href="http://nodejs.org/api/stream.html"><a href="http://nodejs.org/api/stream.html">http://nodejs.org/api/stream.html</a></a></p>
 </blockquote>
 <p>当内存中无法一次装下需要处理的数据时，或者一边读取一边处理更加高效时，我们就需要用到数据流。NodeJS中通过各种<code>Stream</code>来提供对数据流的操作。</p>
 <p>以上边的大文件拷贝程序为例，我们可以为数据来源创建一个只读数据流，示例如下：</p>
@@ -620,7 +721,7 @@ rs.on(&#39;data&#39;, function (chunk) {
 rs.on(&#39;end&#39;, function () {
     ws.end();
 });</code></pre>
-<p>我们把<code>doSomething</code>换成了望只写数据流里写入数据后，以上代码看起来就像是一个文件拷贝程序了。但是以上代码存在上边提到的问题，如果写入速度跟不上读取速度的话，只写数据流内部的缓存会爆仓。我们可以根据<code>.write</code>方法的返回值来判断传入的数据是写入目标了，还是临时放在了缓存了，并根据<code>drain</code>事件来判断什么时候只写数据流已经将缓存中的数据写入目标，可以传入下一个待写数据了。因此代码可以改造如下：</p>
+<p>我们把<code>doSomething</code>换成了往只写数据流里写入数据后，以上代码看起来就像是一个文件拷贝程序了。但是以上代码存在上边提到的问题，如果写入速度跟不上读取速度的话，只写数据流内部的缓存会爆仓。我们可以根据<code>.write</code>方法的返回值来判断传入的数据是写入目标了，还是临时放在了缓存了，并根据<code>drain</code>事件来判断什么时候只写数据流已经将缓存中的数据写入目标，可以传入下一个待写数据了。因此代码可以改造如下：</p>
 <pre><code>var rs = fs.createReadStream(src);
 var ws = fs.createWriteStream(dst);
 
@@ -640,7 +741,7 @@ ws.on(&#39;drain&#39;, function () {
 <p>以上代码实现了数据从只读数据流到只写数据流的搬运，并包括了防爆仓控制。因为这种使用场景很多，例如上边的大文件拷贝程序，NodeJS直接提供了<code>.pipe</code>方法来做这件事情，其内部实现方式与上边的代码类似。</p>
 <h4 id="3.2.3">File System（文件系统）</h4>
 <blockquote>
-<p>   <strong>官方文档： </strong> <a href="http://nodejs.org/api/fs.html"><a href="http://nodejs.org/api/buffer.html">http://nodejs.org/api/buffer.html</a></a></p>
+<p>   <strong>官方文档： </strong> <a href="http://nodejs.org/api/fs.html"><a href="http://nodejs.org/api/fs.html">http://nodejs.org/api/fs.html</a></a></p>
 </blockquote>
 <p>NodeJS通过<code>fs</code>内置模块提供对文件的操作。<code>fs</code>模块提供的API基本上可以分为以下三类：</p>
 <ul>
@@ -673,7 +774,7 @@ ws.on(&#39;drain&#39;, function () {
 <p><code>fs</code>模块提供的API很多，这里不一一介绍，需要时请自行查阅官方文档。</p>
 <h4 id="3.2.4">Path（路径）</h4>
 <blockquote>
-<p>   <strong>官方文档： </strong> <a href="http://nodejs.org/api/path.html"><a href="http://nodejs.org/api/buffer.html">http://nodejs.org/api/buffer.html</a></a></p>
+<p>   <strong>官方文档： </strong> <a href="http://nodejs.org/api/path.html"><a href="http://nodejs.org/api/path.html">http://nodejs.org/api/path.html</a></a></p>
 </blockquote>
 <p>操作文件时难免不与文件路径打交道。NodeJS提供了<code>path</code>内置模块来简化路径相关操作，并提升代码可读性。以下分别介绍几个常用的API。</p>
 <ul>
@@ -689,7 +790,7 @@ ws.on(&#39;drain&#39;, function () {
   store(&#39;foo//baz//../bar&#39;, 2);
   console.log(cache);  // =&gt; { &quot;foo/bar&quot;: 2 }</code></pre>
 <blockquote>
-<p>   <strong>坑出没注意： </strong> 标准化之后的路径里的斜杠在Windows系统下是<code>\</code>，而在*nix系统下是<code>/</code>。如果想保证任何系统下都使用<code>/</code>作为路径分隔符的话，需要用<code>.replace(/\\/g, &#39;/&#39;)</code>再替换一下标准路径。</p>
+<p>   <strong>坑出没注意： </strong> 标准化之后的路径里的斜杠在Windows系统下是<code>\</code>，而在Linux系统下是<code>/</code>。如果想保证任何系统下都使用<code>/</code>作为路径分隔符的话，需要用<code>.replace(/\\/g, &#39;/&#39;)</code>再替换一下标准路径。</p>
 </blockquote>
 </li>
 <li><p>path.join</p>
@@ -857,7 +958,7 @@ http.createServer(function (request, response) {
 }).listen(8124);</code></pre>
 <p>以上程序创建了一个HTTP服务器并监听<code>8124</code>端口，打开浏览器访问该端口<code>http://127.0.0.1:8124/</code>就能够看到效果。</p>
 <blockquote>
-<p>   <strong>豆知识：</strong> 在*nix系统下，监听1024以下端口需要root权限。因此，如果想监听80或443端口的话，需要使用<code>sudo</code>命令启动程序。</p>
+<p>   <strong>豆知识：</strong> 在Linux系统下，监听1024以下端口需要root权限。因此，如果想监听80或443端口的话，需要使用<code>sudo</code>命令启动程序。</p>
 </blockquote>
 <h3 id="4.2">API走马观花</h3>
 <p>我们先大致看看NodeJS提供了哪些和网络操作有关的API。这里并不逐一介绍每个API的使用方法，官方文档已经做得很好了。</p>
@@ -1269,7 +1370,7 @@ main(process.argv.slice(2));</code></pre>
         util.format.apply(util, arguments) + &#39;\n&#39;);
 }</code></pre>
 <h4 id="5.3.4">如何降权</h4>
-<p>在*nix系统下，我们知道需要使用root权限才能监听1024以下端口。但是一旦完成端口监听后，继续让程序运行在root权限下存在安全隐患，因此最好能把权限降下来。以下是这样一个例子。</p>
+<p>在Linux系统下，我们知道需要使用root权限才能监听1024以下端口。但是一旦完成端口监听后，继续让程序运行在root权限下存在安全隐患，因此最好能把权限降下来。以下是这样一个例子。</p>
 <pre><code>http.createServer(callback).listen(80, function () {
     var env = process.env,
         uid = parseInt(env[&#39;SUDO_UID&#39;] || process.getuid(), 10),
@@ -1305,7 +1406,7 @@ child.on(&#39;close&#39;, function (code) {
 <p>上例中使用了<code>.spawn(exec, args, options)</code>方法，该方法支持三个参数。第一个参数是执行文件路径，可以是执行文件的相对或绝对路径，也可以是根据PATH环境变量能找到的执行文件名。第二个参数中，数组中的每个成员都按顺序对应一个命令行参数。第三个参数可选，用于配置子进程的执行环境与行为。</p>
 <p>另外，上例中虽然通过子进程对象的<code>.stdout</code>和<code>.stderr</code>访问子进程的输出，但通过<code>options.stdio</code>字段的不同配置，可以将子进程的输入输出重定向到任何数据流上，或者让子进程共享父进程的标准输入输出流，或者直接忽略子进程的输入输出。</p>
 <h4 id="5.3.6">进程间如何通讯</h4>
-<p>在*nix系统下，进程之间可以通过信号互相通信。以下是一个例子。</p>
+<p>在Linux系统下，进程之间可以通过信号互相通信。以下是一个例子。</p>
 <pre><code>/* parent.js */
 var child = child_process.spawn(&#39;node&#39;, [ &#39;child.js&#39; ]);
 
@@ -1972,7 +2073,18 @@ fi</code></pre>
 
 </article>
 <footer>
+<p>© 2013-2014 Alibaba.com, Inc.</p>
 
 </footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48219044-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>

@@ -55,11 +55,11 @@ NodeJS提供了基本的文件操作API，但是像文件拷贝这种高级功�
 
 JS语言自身只有字符串数据类型，没有二进制数据类型，因此NodeJS提供了一个与`String`对等的全局构造函数`Buffer`来提供对二进制数据的操作。除了可以读取文件得到`Buffer`的实例外，还能够直接构造，例如：
 
-	var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]);
+	var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);
 
 `Buffer`与字符串类似，除了可以用`.length`属性得到字节长度外，还可以用`[index]`方式读取指定位置的字节，例如：
 
-	bin[0]; // => 0x48;
+	bin[0]; // => 0x68;
 
 `Buffer`与字符串能够互相转化，例如可以使用指定编码将二进制数据转化为字符串：
 
@@ -75,34 +75,34 @@ JS语言自身只有字符串数据类型，没有二进制数据类型，因此
 
 而`.slice`方法也不是返回一个新的`Buffer`，而更像是返回了指向原`Buffer`中间的某个位置的指针，如下所示。
 
-	[ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]
+	[ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]
 	    ^           ^
 	    |           |
 	   bin     bin.slice(2)
 
 因此对`.slice`方法返回的`Buffer`的修改会作用于原`Buffer`，例如：
 
-	var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]);
+	var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);
 	var sub = bin.slice(2);
 	
 	sub[0] = 0x65;
-	console.log(bin); // => <Buffer 48 65 65 6c 6f>
+	console.log(bin); // => <Buffer 68 65 65 6c 6f>
 
 也因此，如果想要拷贝一份`Buffer`，得首先创建一个新的`Buffer`，并通过`.copy`方法把原`Buffer`中的数据复制过去。这个类似于申请一块新的内存，并把已有内存中的数据复制过去。以下是一个例子。
 
-	var bin = new Buffer([ 0x48, 0x65, 0x6c, 0x6c, 0x6c ]);
+	var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);
 	var dup = new Buffer(bin.length);
 
 	bin.copy(dup);
-	dup[0] = 0x68;
-	console.log(bin); // => <Buffer 48 65 6c 6c 6f>
-	console.log(dup); // => <Buffer 68 65 65 6c 6f>
+	dup[0] = 0x48;
+	console.log(bin); // => <Buffer 68 65 6c 6c 6f>
+	console.log(dup); // => <Buffer 48 65 65 6c 6f>
 
 总之，`Buffer`将JS的数据处理能力从字符串扩展到了任意二进制数据。
 
 #### Stream（数据流）
 
->	**官方文档： ** [http://nodejs.org/api/buffer.html](http://nodejs.org/api/stream.html)
+>	**官方文档： ** [http://nodejs.org/api/stream.html](http://nodejs.org/api/stream.html)
 
 当内存中无法一次装下需要处理的数据时，或者一边读取一边处理更加高效时，我们就需要用到数据流。NodeJS中通过各种`Stream`来提供对数据流的操作。
 
@@ -150,7 +150,7 @@ JS语言自身只有字符串数据类型，没有二进制数据类型，因此
 		ws.end();
 	});
 
-我们把`doSomething`换成了望只写数据流里写入数据后，以上代码看起来就像是一个文件拷贝程序了。但是以上代码存在上边提到的问题，如果写入速度跟不上读取速度的话，只写数据流内部的缓存会爆仓。我们可以根据`.write`方法的返回值来判断传入的数据是写入目标了，还是临时放在了缓存了，并根据`drain`事件来判断什么时候只写数据流已经将缓存中的数据写入目标，可以传入下一个待写数据了。因此代码可以改造如下：
+我们把`doSomething`换成了往只写数据流里写入数据后，以上代码看起来就像是一个文件拷贝程序了。但是以上代码存在上边提到的问题，如果写入速度跟不上读取速度的话，只写数据流内部的缓存会爆仓。我们可以根据`.write`方法的返回值来判断传入的数据是写入目标了，还是临时放在了缓存了，并根据`drain`事件来判断什么时候只写数据流已经将缓存中的数据写入目标，可以传入下一个待写数据了。因此代码可以改造如下：
 
 	var rs = fs.createReadStream(src);
 	var ws = fs.createWriteStream(dst);
@@ -173,7 +173,7 @@ JS语言自身只有字符串数据类型，没有二进制数据类型，因此
 
 #### File System（文件系统）
 
->	**官方文档： ** [http://nodejs.org/api/buffer.html](http://nodejs.org/api/fs.html)
+>	**官方文档： ** [http://nodejs.org/api/fs.html](http://nodejs.org/api/fs.html)
 
 NodeJS通过`fs`内置模块提供对文件的操作。`fs`模块提供的API基本上可以分为以下三类：
 
@@ -214,7 +214,7 @@ NodeJS最精华的异步IO模型在`fs`模块里有着充分的体现，例如�
 
 #### Path（路径）
 
->	**官方文档： ** [http://nodejs.org/api/buffer.html](http://nodejs.org/api/path.html)
+>	**官方文档： ** [http://nodejs.org/api/path.html](http://nodejs.org/api/path.html)
 
 操作文件时难免不与文件路径打交道。NodeJS提供了`path`内置模块来简化路径相关操作，并提升代码可读性。以下分别介绍几个常用的API。
 
@@ -232,7 +232,7 @@ NodeJS最精华的异步IO模型在`fs`模块里有着充分的体现，例如�
 		store('foo//baz//../bar', 2);
 		console.log(cache);  // => { "foo/bar": 2 }
 
-	>	**坑出没注意： ** 标准化之后的路径里的斜杠在Windows系统下是`\`，而在*nix系统下是`/`。如果想保证任何系统下都使用`/`作为路径分隔符的话，需要用`.replace(/\\/g, '/')`再替换一下标准路径。
+	>	**坑出没注意： ** 标准化之后的路径里的斜杠在Windows系统下是`\`，而在Linux系统下是`/`。如果想保证任何系统下都使用`/`作为路径分隔符的话，需要用`.replace(/\\/g, '/')`再替换一下标准路径。
 
 + path.join
 
