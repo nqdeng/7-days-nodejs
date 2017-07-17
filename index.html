@@ -667,8 +667,9 @@ main(process.argv.slice(2));</code></pre>
 <pre><code>var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);
 var sub = bin.slice(2);
 
+console.log(bin); // =&gt; &lt;Buffer 6c 6c 6f&gt;</code></pre>
 sub[0] = 0x65;
-console.log(bin); // =&gt; &lt;Buffer 68 65 65 6c 6f&gt;</code></pre>
+console.log(bin); // =&gt; &lt;Buffer 65 6c 6f&gt;</code></pre>
 <p>也因此，如果想要拷贝一份<code>Buffer</code>，得首先创建一个新的<code>Buffer</code>，并通过<code>.copy</code>方法把原<code>Buffer</code>中的数据复制过去。这个类似于申请一块新的内存，并把已有内存中的数据复制过去。以下是一个例子。</p>
 <pre><code>var bin = new Buffer([ 0x68, 0x65, 0x6c, 0x6c, 0x6f ]);
 var dup = new Buffer(bin.length);
@@ -676,7 +677,7 @@ var dup = new Buffer(bin.length);
 bin.copy(dup);
 dup[0] = 0x48;
 console.log(bin); // =&gt; &lt;Buffer 68 65 6c 6c 6f&gt;
-console.log(dup); // =&gt; &lt;Buffer 48 65 65 6c 6f&gt;</code></pre>
+console.log(dup); // =&gt; &lt;Buffer 48 65 6c 6c 6f&gt;</code></pre>
 <p>总之，<code>Buffer</code>将JS的数据处理能力从字符串扩展到了任意二进制数据。</p>
 <h4 id="3.2.2">Stream（数据流）</h4>
 <blockquote>
