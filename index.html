@@ -1115,8 +1115,8 @@ request.end();</code></pre>
 <p>处理HTTP请求时<code>url</code>模块使用率超高，因为该模块允许解析URL、生成URL，以及拼接URL。首先我们来看看一个完整的URL的各组成部分。</p>
 <pre><code>                           href
  -----------------------------------------------------------------
-                            host              path
-                      --------------- ----------------------------
+                            host              path            hash
+                      --------------- ---------------------- -----
  http: // user:pass @ host.com : 8080 /p/a/t/h ?query=string #hash
  -----    ---------   --------   ---- -------- ------------- -----
 protocol     auth     hostname   port pathname     search     hash
