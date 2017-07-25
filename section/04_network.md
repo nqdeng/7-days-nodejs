@@ -199,8 +199,8 @@ HTTP响应本质上也是一个数据流，同样由响应头（headers）和响
 
 	                           href
 	 -----------------------------------------------------------------
-	                            host              path
-	                      --------------- ----------------------------
+	                            host              path            hash
+	                      --------------- ---------------------- -----
 	 http: // user:pass @ host.com : 8080 /p/a/t/h ?query=string #hash
 	 -----    ---------   --------   ---- -------- ------------- -----
 	protocol     auth     hostname   port pathname     search     hash
