@@ -324,6 +324,16 @@
 		rm pid
 	fi
 
+此外，守护进程代码的入口函数也要做以下调整。
+
+	function main(argv) {
+		spawn(path.join(__dirname, 'server.js'), argv[0]);
+		process.on('SIGTERM', function () {
+			worker.kill();
+			process.exit(0);
+		});
+	}
+
 于是这样我们就有了一个简单的代码部署目录和服务控制脚本，我们的服务器程序就可以上线工作了。
 
 ### 后续迭代
